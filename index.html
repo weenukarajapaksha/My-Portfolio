@@ -86,9 +86,9 @@
       </p>
 
       <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary">
-          <i data-lucide="folder-open" class="btn__icon"></i>
-          View Projects
+        <a href="Weenuka_Rajapaksha_CV.pdf" class="btn btn--primary" download>
+          <i data-lucide="download" class="btn__icon"></i>
+          Download CV
         </a>
         <a href="#contact" class="btn btn--outline">
           <i data-lucide="send" class="btn__icon"></i>
@@ -489,11 +489,12 @@
         <button class="filter-btn" data-filter="iot">IoT</button>
         <button class="filter-btn" data-filter="ml">AI / ML</button>
         <button class="filter-btn" data-filter="web">Full Stack</button>
+        <button class="filter-btn" data-filter="desktop">Desktop</button>
       </div>
 
       <div class="projects__grid" id="projectsGrid">
         <!-- Project 1: FeverGuard AI -->
-        <div class="project-card reveal" data-category="iot">
+        <div class="project-card reveal" data-category="iot web">
           <div class="project-card__image">
             <div class="project-slideshow" data-slideshow>
               <img class="project-slideshow__img active" src="project 1/image 01.png" alt="FeverGuard AI — System Portal Gateway" loading="lazy" />
@@ -516,6 +517,7 @@
               <span class="project-card__tag">Flask</span>
               <span class="project-card__tag">PostgreSQL</span>
               <span class="project-card__tag">Python ML</span>
+              <span class="project-card__tag">Full Stack</span>
             </div>
             <h3 class="project-card__title">FeverGuard AI — Smart Healthcare Monitoring</h3>
             <p class="project-card__description">An intelligent IoT-based healthcare system that continuously monitors body temperature via ESP32-C6 &amp; DS18B20, generates automated digital fever charts, and uses a custom-trained ML model to analyze fever patterns for clinical decision support — recommending probable conditions, investigations, and medical specialties. Features separate dashboards for hospitals and home users with full continuity of care.</p>
@@ -584,7 +586,7 @@
         </div>
 
         <!-- Project 4: SoundScout AI -->
-        <div class="project-card reveal" data-category="ml">
+        <div class="project-card reveal" data-category="ml web">
           <div class="project-card__image">
             <div class="project-slideshow" data-slideshow>
               <img class="project-slideshow__img active" src="project 4/image 01.png" alt="SoundScout AI — Landing Page, AI Infrastructure Consultant &amp; Bidding Marketplace" loading="lazy" />
@@ -607,66 +609,22 @@
               <span class="project-card__tag">Node.js</span>
               <span class="project-card__tag">PostgreSQL</span>
               <span class="project-card__tag">Socket.io</span>
+              <span class="project-card__tag">Full Stack</span>
             </div>
             <h3 class="project-card__title">SoundScout AI — AI-Powered AV Equipment Rental Marketplace</h3>
             <p class="project-card__description">A full-stack, two-sided marketplace connecting event organizers with AV equipment vendors across Sri Lanka. A LangGraph-orchestrated pipeline of specialist AI agents (Audio, Visual/Lighting, Logistics) powered by Gemini generates tailored equipment plans, cross-checked against a scikit-learn Random Forest model for realistic pricing — automatically re-scoping if a plan exceeds budget. Vendors browse open events and bid in real time via Socket.io, backed by a JWT-secured Node/Express API with role-based access control.</p>
           </div>
         </div>
 
-        <!-- Project 5: IoT Smart Environment -->
-        <div class="project-card reveal" data-category="iot">
+        <!-- Project 5: Vocal Enhancer -->
+        <div class="project-card reveal" data-category="desktop">
           <div class="project-card__image">
-            <div class="project-card__thumbnail"
-              style="background: linear-gradient(135deg, #43e97b, #38f9d7); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">
-              🏡</div>
-            <div class="project-card__overlay">
-              <button class="project-card__overlay-btn project-card__overlay-btn--ghost">GitHub</button>
+            <div class="project-slideshow" data-slideshow>
+              <img class="project-slideshow__img active" src="project 5/image 01 (1).png" alt="Vocal Enhancer — Real-Time Tab with Device Selection, Presets, and Vocal Chain Effects" loading="lazy" />
+              <img class="project-slideshow__img" src="project 5/image 01 (2).png" alt="Vocal Enhancer — Harmony, Compressor, and Parametric EQ Controls" loading="lazy" />
+              <img class="project-slideshow__img" src="project 5/image 01 (3).png" alt="Vocal Enhancer — Load &amp; Process Tab for Offline File Processing" loading="lazy" />
+              <div class="project-slideshow__dots"></div>
             </div>
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__tags">
-              <span class="project-card__tag">Arduino</span>
-              <span class="project-card__tag">ESP32</span>
-              <span class="project-card__tag">Sensors</span>
-              <span class="project-card__tag">C++</span>
-            </div>
-            <h3 class="project-card__title">Smart Environment Monitor</h3>
-            <p class="project-card__description">IoT-based environmental monitoring system using Arduino and ESP32 with
-              multiple sensors for temperature, humidity, and air quality. Data transmitted wirelessly for real-time
-              visualization.</p>
-          </div>
-        </div>
-
-        <!-- Project 6: Personal Portfolio -->
-        <div class="project-card reveal" data-category="web">
-          <div class="project-card__image">
-            <div class="project-card__thumbnail"
-              style="background: linear-gradient(135deg, #a18cd1, #fbc2eb); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">
-              🌐</div>
-            <div class="project-card__overlay">
-              <button class="project-card__overlay-btn project-card__overlay-btn--primary">Live Demo</button>
-              <button class="project-card__overlay-btn project-card__overlay-btn--ghost">GitHub</button>
-            </div>
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__tags">
-              <span class="project-card__tag">HTML</span>
-              <span class="project-card__tag">CSS</span>
-              <span class="project-card__tag">JavaScript</span>
-            </div>
-            <h3 class="project-card__title">Developer Portfolio Website</h3>
-            <p class="project-card__description">This portfolio you're viewing — a modern, animated personal website
-              built from scratch with vanilla HTML, CSS, and JavaScript featuring particle effects, scroll animations,
-              and responsive design.</p>
-          </div>
-        </div>
-
-        <!-- Project 7: Data Analysis -->
-        <div class="project-card reveal" data-category="ml">
-          <div class="project-card__image">
-            <div class="project-card__thumbnail"
-              style="background: linear-gradient(135deg, #fa709a, #fee140); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">
-              📊</div>
             <div class="project-card__overlay">
               <button class="project-card__overlay-btn project-card__overlay-btn--ghost">GitHub</button>
             </div>
@@ -674,16 +632,16 @@
           <div class="project-card__body">
             <div class="project-card__tags">
               <span class="project-card__tag">Python</span>
-              <span class="project-card__tag">Pandas</span>
-              <span class="project-card__tag">Matplotlib</span>
-              <span class="project-card__tag">Seaborn</span>
+              <span class="project-card__tag">PySide6</span>
+              <span class="project-card__tag">sounddevice</span>
+              <span class="project-card__tag">SciPy</span>
+              <span class="project-card__tag">DSP</span>
             </div>
-            <h3 class="project-card__title">Exploratory Data Analysis Projects</h3>
-            <p class="project-card__description">Collection of data analysis and visualization projects covering
-              datasets in healthcare, finance, and social trends. Includes statistical analysis, data cleaning, and
-              insightful visualizations.</p>
+            <h3 class="project-card__title">Vocal Enhancer — Real-Time Voice Processing App</h3>
+            <p class="project-card__description">A lightweight, open-source desktop alternative to Auto-Tune/Voicemod. Streams mic input through a low-latency PortAudio duplex engine into a configurable DSP chain — noise gate, YIN-based pitch correction with key/scale snapping, dual-voice harmony, compressor, 3-band parametric EQ, robot voice, delay, and Freeverb-style reverb — all tunable live from a PySide6 dark-themed GUI with saved presets and level meters. Also loads WAV/FLAC/OGG/AIFF files to run the same effect chain offline.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -725,21 +683,26 @@
         <div class="timeline__item reveal">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
-            <span class="timeline__date">2024 — Present</span>
+            <span class="timeline__date">2025</span>
             <h3 class="timeline__role">Academic &amp; Research Projects</h3>
-            <p class="timeline__company">University of Moratuwa</p>
+            <p class="timeline__company">University of Moratuwa — Research Project</p>
             <p class="timeline__description">
-              Developed the Medical IoT Health Monitoring System combining ESP32 hardware with
-              machine learning for disease prediction. Built a full-stack sound equipment rental
-              platform as a team project. Continuously working on personal projects in AI/ML and
-              embedded systems.
+              Research on Identifying &amp; Predicting Malnutrition Hotspots: built a machine learning
+              pipeline to predict regions at high risk of malnutrition and surface the factors driving
+              that risk — collecting and merging real-world data from FAOSTAT, World Bank Open Data,
+              UNDP, and WHO, then cleaning, preprocessing, and engineering features across the combined
+              dataset. Trained and compared several models, with a Random Forest classifier performing
+              best at 93.77% accuracy, 0.9380 F1-score, and 0.9915 ROC-AUC. Co-authored a full research
+              paper covering the literature review, methodology, dataset description, model comparison,
+              and results — aimed at helping governments and NGOs plan and allocate nutrition
+              interventions with data-driven evidence.
             </p>
             <div class="timeline__tech">
-              <span class="timeline__tech-tag">IoT</span>
-              <span class="timeline__tech-tag">Machine Learning</span>
-              <span class="timeline__tech-tag">React</span>
-              <span class="timeline__tech-tag">Node.js</span>
-              <span class="timeline__tech-tag">ESP32</span>
+              <span class="timeline__tech-tag">Python</span>
+              <span class="timeline__tech-tag">Scikit-learn</span>
+              <span class="timeline__tech-tag">Random Forest</span>
+              <span class="timeline__tech-tag">Data Engineering</span>
+              <span class="timeline__tech-tag">Research Paper</span>
             </div>
           </div>
         </div>
@@ -841,73 +804,6 @@
           </div>
         </div>
 
-        <!-- Achievement 3 -->
-        <div class="achievement-card reveal">
-          <div class="achievement-card__image">
-            <div class="achievement-card__placeholder">
-              <i data-lucide="graduation-cap"></i>
-              <span>Upload Image</span>
-            </div>
-          </div>
-          <div class="achievement-card__body">
-            <div class="achievement-card__badge">🎓 Academic</div>
-            <h3 class="achievement-card__title">Your Achievement Title</h3>
-            <p class="achievement-card__org">University / Institution</p>
-            <p class="achievement-card__date">2024</p>
-            <p class="achievement-card__description">Brief description of the achievement and what it means to you.</p>
-          </div>
-        </div>
-
-        <!-- Achievement 4 -->
-        <div class="achievement-card reveal">
-          <div class="achievement-card__image">
-            <div class="achievement-card__placeholder">
-              <i data-lucide="medal"></i>
-              <span>Upload Image</span>
-            </div>
-          </div>
-          <div class="achievement-card__body">
-            <div class="achievement-card__badge">🏅 Recognition</div>
-            <h3 class="achievement-card__title">Your Achievement Title</h3>
-            <p class="achievement-card__org">Organization / Event Name</p>
-            <p class="achievement-card__date">2024</p>
-            <p class="achievement-card__description">Brief description of the achievement and what it means to you.</p>
-          </div>
-        </div>
-
-        <!-- Achievement 5 -->
-        <div class="achievement-card reveal">
-          <div class="achievement-card__image">
-            <div class="achievement-card__placeholder">
-              <i data-lucide="code"></i>
-              <span>Upload Image</span>
-            </div>
-          </div>
-          <div class="achievement-card__body">
-            <div class="achievement-card__badge">💻 Hackathon</div>
-            <h3 class="achievement-card__title">Your Achievement Title</h3>
-            <p class="achievement-card__org">Hackathon / Event Name</p>
-            <p class="achievement-card__date">2025</p>
-            <p class="achievement-card__description">Brief description of the achievement and what it means to you.</p>
-          </div>
-        </div>
-
-        <!-- Achievement 6 -->
-        <div class="achievement-card reveal">
-          <div class="achievement-card__image">
-            <div class="achievement-card__placeholder">
-              <i data-lucide="star"></i>
-              <span>Upload Image</span>
-            </div>
-          </div>
-          <div class="achievement-card__body">
-            <div class="achievement-card__badge">⭐ Certification</div>
-            <h3 class="achievement-card__title">Your Achievement Title</h3>
-            <p class="achievement-card__org">Platform / Issuer</p>
-            <p class="achievement-card__date">2025</p>
-            <p class="achievement-card__description">Brief description of the certification and skills validated.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -937,7 +833,16 @@
               </div>
               <div class="contact__method-text">
                 <strong>Email</strong>
-                <span>weenuka.rajapaksha@example.com</span>
+                <span>weenuka20030816@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact__method">
+              <div class="contact__method-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="contact__method-text">
+                <strong>Phone</strong>
+                <span>+94 76 256 7546</span>
               </div>
             </div>
             <div class="contact__method">
@@ -961,41 +866,44 @@
           </div>
 
           <div class="contact__socials">
-            <a href="https://github.com/" class="contact__social" aria-label="GitHub" target="_blank"><i
-                data-lucide="github"></i></a>
-            <a href="https://linkedin.com/" class="contact__social" aria-label="LinkedIn" target="_blank"><i
-                data-lucide="linkedin"></i></a>
-            <a href="mailto:weenuka.rajapaksha@example.com" class="contact__social" aria-label="Email"><i
+            <a href="https://github.com/weenukarajapaksha" class="contact__social" aria-label="GitHub" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.874.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.624-5.48 5.92.43.372.814 1.103.814 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.696.825.578C20.565 21.795 24 17.298 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/weenuka-rajapaksha-8bb4a7349" class="contact__social" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.666H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"/></svg>
+            </a>
+            <a href="mailto:weenuka20030816@gmail.com" class="contact__social" aria-label="Email"><i
                 data-lucide="mail"></i></a>
           </div>
         </div>
 
         <div class="contact__form reveal-right" id="contactForm">
-          <form id="contactFormElement">
+          <form id="contactFormElement" action="https://formspree.io/f/xojgwrvy" method="POST">
             <div class="form__group">
               <label class="form__label" for="contactName">Full Name</label>
-              <input class="form__input" type="text" id="contactName" placeholder="John Doe" required />
+              <input class="form__input" type="text" id="contactName" name="name" placeholder="John Doe" required />
               <span class="form__error">Please enter your name.</span>
             </div>
             <div class="form__group">
               <label class="form__label" for="contactEmail">Email Address</label>
-              <input class="form__input" type="email" id="contactEmail" placeholder="john@example.com" required />
+              <input class="form__input" type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
               <span class="form__error">Please enter a valid email.</span>
             </div>
             <div class="form__group">
               <label class="form__label" for="contactSubject">Subject</label>
-              <input class="form__input" type="text" id="contactSubject" placeholder="Internship Opportunity" />
+              <input class="form__input" type="text" id="contactSubject" name="subject" placeholder="Internship Opportunity" />
             </div>
             <div class="form__group">
               <label class="form__label" for="contactMessage">Message</label>
-              <textarea class="form__textarea" id="contactMessage" placeholder="Tell me about the opportunity..."
+              <textarea class="form__textarea" id="contactMessage" name="message" placeholder="Tell me about the opportunity..."
                 rows="5" required></textarea>
               <span class="form__error">Please enter a message.</span>
             </div>
-            <button type="submit" class="btn btn--primary form__submit">
+            <button type="submit" class="btn btn--primary form__submit" id="contactSubmitBtn">
               <i data-lucide="send" class="btn__icon"></i>
               Send Message
             </button>
+            <p class="form__error" id="formSubmitError">Something went wrong — please email me directly instead.</p>
           </form>
           <div class="form__success" id="formSuccess">
             ✅ Message sent successfully! I'll get back to you soon.
@@ -1026,9 +934,9 @@
         </div>
         <div>
           <h4 class="footer__title">Connect</h4>
-          <a href="https://github.com/" class="footer__link" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/" class="footer__link" target="_blank">LinkedIn</a>
-          <a href="mailto:weenuka.rajapaksha@example.com" class="footer__link">Email</a>
+          <a href="https://github.com/weenukarajapaksha" class="footer__link" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/weenuka-rajapaksha-8bb4a7349" class="footer__link" target="_blank">LinkedIn</a>
+          <a href="mailto:weenuka20030816@gmail.com" class="footer__link">Email</a>
         </div>
       </div>
       <div class="footer__bottom">

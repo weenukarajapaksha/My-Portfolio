@@ -278,8 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
+        const categories = card.getAttribute('data-category').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
           card.classList.remove('hidden');
           card.style.animation = 'fadeInUp 0.5s ease forwards';
         } else {
@@ -321,12 +321,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3500);
   });
 
-  /* ---------- Contact Form Validation ---------- */
+  /* ---------- Contact Form Validation & Submission ---------- */
   const form = document.getElementById('contactFormElement');
   const formSuccess = document.getElementById('formSuccess');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const submitError = document.getElementById('formSubmitError');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let isValid = true;
 
@@ -358,16 +360,33 @@ document.addEventListener('DOMContentLoaded', () => {
         message.closest('.form__group').classList.remove('error');
       }
 
-      if (isValid) {
+      if (!isValid) return;
+
+      submitBtn.disabled = true;
+      submitError.classList.remove('show');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Form submission failed');
+
         form.style.display = 'none';
         formSuccess.classList.add('show');
 
-        // Reset after 3 seconds
+        // Reset after 4 seconds
         setTimeout(() => {
           form.reset();
           form.style.display = 'block';
           formSuccess.classList.remove('show');
+          submitBtn.disabled = false;
         }, 4000);
+      } catch (err) {
+        submitError.classList.add('show');
+        submitBtn.disabled = false;
       }
     });
 

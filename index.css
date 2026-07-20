@@ -156,6 +156,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -1392,6 +1393,15 @@ button, input, textarea {
 }
 
 .form__group.error .form__error {
+  display: block;
+}
+
+#formSubmitError {
+  text-align: center;
+  margin-top: 14px;
+}
+
+#formSubmitError.show {
   display: block;
 }
 
