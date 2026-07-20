@@ -72,18 +72,6 @@
   background: rgba(5, 8, 22, 0.88);
 }
 
-[data-theme="dark"] .hero__decor-circle--1 {
-  background: linear-gradient(135deg, rgba(108, 99, 255, 0.15), rgba(255, 107, 107, 0.1));
-}
-
-[data-theme="dark"] .hero__decor-circle--2 {
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.12), rgba(0, 201, 167, 0.1));
-}
-
-[data-theme="dark"] .hero__decor-circle--3 {
-  background: linear-gradient(135deg, rgba(0, 201, 167, 0.15), rgba(108, 99, 255, 0.1));
-}
-
 [data-theme="dark"] .about__image-placeholder {
   background: linear-gradient(135deg, #1a1040 0%, #1e1145 50%, #2a0a20 100%);
 }
@@ -405,6 +393,7 @@ button, input, textarea {
   align-items: center;
   background: var(--gradient-hero-bg);
   overflow: hidden;
+  padding: 100px 0 60px;
 }
 
 .hero__canvas {
@@ -543,49 +532,26 @@ button, input, textarea {
   margin-top: 2px;
 }
 
-/* Decorative floating shapes */
-.hero__decor {
+/* Decorative animated illustration */
+.hero__illustration {
   position: absolute;
   right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  width: 440px;
-  height: 440px;
+  width: 460px;
+  height: 420px;
   z-index: 1;
+  animation: fadeInUp 1s var(--ease) 0.6s both;
 }
 
-.hero__decor-circle {
-  position: absolute;
-  border-radius: 50%;
+.hero__svg {
+  width: 100%;
+  height: 100%;
   animation: float 6s ease-in-out infinite;
 }
 
-.hero__decor-circle--1 {
-  width: 340px;
-  height: 340px;
-  top: 50px;
-  left: 50px;
-  background: linear-gradient(135deg, rgba(108, 99, 255, 0.12), rgba(255, 107, 107, 0.08));
-  backdrop-filter: blur(2px);
-  animation-delay: 0s;
-}
-
-.hero__decor-circle--2 {
-  width: 200px;
-  height: 200px;
-  top: 0;
-  right: 20px;
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(0, 201, 167, 0.08));
-  animation-delay: -2s;
-}
-
-.hero__decor-circle--3 {
-  width: 120px;
-  height: 120px;
-  bottom: 30px;
-  left: 0;
-  background: linear-gradient(135deg, rgba(0, 201, 167, 0.12), rgba(108, 99, 255, 0.08));
-  animation-delay: -4s;
+.hero__float-el {
+  animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -1635,7 +1601,7 @@ button, input, textarea {
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .hero__decor { display: none; }
+  .hero__illustration { display: none; }
   .about__grid { grid-template-columns: 1fr; gap: 40px; }
   .about__image-wrapper { max-width: 400px; margin: 0 auto; }
   .contact__grid { grid-template-columns: 1fr; gap: 40px; }

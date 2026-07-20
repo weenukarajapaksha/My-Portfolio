@@ -112,11 +112,67 @@
       </div>
     </div>
 
-    <!-- Decorative blobs -->
-    <div class="hero__decor" aria-hidden="true">
-      <div class="hero__decor-circle hero__decor-circle--1"></div>
-      <div class="hero__decor-circle hero__decor-circle--2"></div>
-      <div class="hero__decor-circle hero__decor-circle--3"></div>
+    <!-- Animated tech illustration -->
+    <div class="hero__illustration" aria-hidden="true">
+      <svg viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg" class="hero__svg">
+        <!-- Laptop body -->
+        <rect x="100" y="80" width="300" height="200" rx="12" fill="var(--bg-card, #fff)" stroke="var(--accent-purple)" stroke-width="2" opacity="0.9"/>
+        <!-- Screen -->
+        <rect x="115" y="95" width="270" height="165" rx="6" fill="var(--bg-secondary, #f0f2ff)"/>
+        <!-- Code lines on screen -->
+        <g class="hero__code-lines">
+          <rect x="135" y="115" width="80" height="6" rx="3" fill="var(--accent-purple)" opacity="0.7">
+            <animate attributeName="width" values="80;120;80" dur="3s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="135" y="130" width="140" height="6" rx="3" fill="var(--accent-coral)" opacity="0.5">
+            <animate attributeName="width" values="140;90;140" dur="4s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="155" y="145" width="100" height="6" rx="3" fill="var(--accent-teal)" opacity="0.6">
+            <animate attributeName="width" values="100;160;100" dur="3.5s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="155" y="160" width="60" height="6" rx="3" fill="var(--accent-purple)" opacity="0.4">
+            <animate attributeName="width" values="60;110;60" dur="2.8s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="135" y="175" width="120" height="6" rx="3" fill="var(--accent-coral)" opacity="0.5">
+            <animate attributeName="width" values="120;70;120" dur="3.2s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="155" y="190" width="90" height="6" rx="3" fill="var(--accent-teal)" opacity="0.6">
+            <animate attributeName="width" values="90;140;90" dur="4.2s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="135" y="205" width="130" height="6" rx="3" fill="var(--accent-purple)" opacity="0.3">
+            <animate attributeName="width" values="130;80;130" dur="3.8s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="135" y="220" width="70" height="6" rx="3" fill="var(--accent-coral)" opacity="0.4">
+            <animate attributeName="width" values="70;100;70" dur="2.5s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+        <!-- Laptop base -->
+        <path d="M70 280 L100 280 L105 295 L395 295 L400 280 L430 280 L420 310 Q418 318 410 318 L90 318 Q82 318 80 310 Z" fill="var(--bg-card, #fff)" stroke="var(--accent-purple)" stroke-width="2" opacity="0.9"/>
+        <ellipse cx="250" cy="288" rx="30" ry="4" fill="var(--accent-purple)" opacity="0.15"/>
+        <!-- Floating elements -->
+        <!-- Brackets -->
+        <text x="60" y="150" font-size="28" fill="var(--accent-purple)" opacity="0.35" font-family="monospace" class="hero__float-el" style="animation-delay: 0s;">&lt;/&gt;</text>
+        <text x="400" y="130" font-size="22" fill="var(--accent-coral)" opacity="0.3" font-family="monospace" class="hero__float-el" style="animation-delay: -2s;">{ }</text>
+        <text x="420" y="250" font-size="18" fill="var(--accent-teal)" opacity="0.3" font-family="monospace" class="hero__float-el" style="animation-delay: -4s;">01</text>
+        <text x="50" y="270" font-size="20" fill="var(--accent-coral)" opacity="0.25" font-family="monospace" class="hero__float-el" style="animation-delay: -1s;">AI</text>
+        <text x="380" y="70" font-size="16" fill="var(--accent-purple)" opacity="0.25" font-family="monospace" class="hero__float-el" style="animation-delay: -3s;">( )</text>
+        <!-- Data nodes -->
+        <circle cx="80" cy="100" r="6" fill="var(--accent-purple)" opacity="0.3" class="hero__float-el" style="animation-delay: -1.5s;"/>
+        <circle cx="440" cy="180" r="5" fill="var(--accent-teal)" opacity="0.3" class="hero__float-el" style="animation-delay: -3.5s;"/>
+        <circle cx="420" cy="310" r="4" fill="var(--accent-coral)" opacity="0.25" class="hero__float-el" style="animation-delay: -0.5s;"/>
+        <circle cx="70" cy="320" r="5" fill="var(--accent-purple)" opacity="0.2" class="hero__float-el" style="animation-delay: -2.5s;"/>
+        <!-- Connection lines -->
+        <line x1="80" y1="106" x2="115" y2="140" stroke="var(--accent-purple)" stroke-width="1" opacity="0.12"/>
+        <line x1="440" y1="185" x2="400" y2="230" stroke="var(--accent-teal)" stroke-width="1" opacity="0.12"/>
+        <!-- Glow behind laptop -->
+        <ellipse cx="250" cy="200" rx="160" ry="120" fill="url(#laptopGlow)" opacity="0.4"/>
+        <defs>
+          <radialGradient id="laptopGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--accent-purple)" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="var(--accent-purple)" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
 
     <div class="hero__scroll" aria-hidden="true">
@@ -527,7 +583,37 @@
           </div>
         </div>
 
-        <!-- Project 4: IoT Smart Environment -->
+        <!-- Project 4: SoundScout AI -->
+        <div class="project-card reveal" data-category="ml">
+          <div class="project-card__image">
+            <div class="project-slideshow" data-slideshow>
+              <img class="project-slideshow__img active" src="project 4/image 01.png" alt="SoundScout AI — Landing Page, AI Infrastructure Consultant &amp; Bidding Marketplace" loading="lazy" />
+              <img class="project-slideshow__img" src="project 4/Screenshot 2026-07-20 223707.png" alt="SoundScout AI — Organizer Dashboard with Event Cards" loading="lazy" />
+              <img class="project-slideshow__img" src="project 4/Screenshot 2026-07-20 223811.png" alt="SoundScout AI — New Event Creation Flow" loading="lazy" />
+              <img class="project-slideshow__img" src="project 4/Screenshot 2026-07-20 224142.png" alt="SoundScout AI — Vendor Open Opportunities &amp; Instant Rental Listing" loading="lazy" />
+              <img class="project-slideshow__img" src="project 4/Screenshot 2026-07-20 224204.png" alt="SoundScout AI — Bid Submission Modal" loading="lazy" />
+              <img class="project-slideshow__img" src="project 4/Screenshot 2026-07-20 224222.png" alt="SoundScout AI — Instant Rental Marketplace" loading="lazy" />
+              <div class="project-slideshow__dots"></div>
+            </div>
+            <div class="project-card__overlay">
+              <a href="https://github.com/sound-scout-dev/sound-scout-frontend.git" target="_blank" class="project-card__overlay-btn project-card__overlay-btn--ghost">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">LangGraph</span>
+              <span class="project-card__tag">Gemini API</span>
+              <span class="project-card__tag">React 19</span>
+              <span class="project-card__tag">Node.js</span>
+              <span class="project-card__tag">PostgreSQL</span>
+              <span class="project-card__tag">Socket.io</span>
+            </div>
+            <h3 class="project-card__title">SoundScout AI — AI-Powered AV Equipment Rental Marketplace</h3>
+            <p class="project-card__description">A full-stack, two-sided marketplace connecting event organizers with AV equipment vendors across Sri Lanka. A LangGraph-orchestrated pipeline of specialist AI agents (Audio, Visual/Lighting, Logistics) powered by Gemini generates tailored equipment plans, cross-checked against a scikit-learn Random Forest model for realistic pricing — automatically re-scoping if a plan exceeds budget. Vendors browse open events and bid in real time via Socket.io, backed by a JWT-secured Node/Express API with role-based access control.</p>
+          </div>
+        </div>
+
+        <!-- Project 5: IoT Smart Environment -->
         <div class="project-card reveal" data-category="iot">
           <div class="project-card__image">
             <div class="project-card__thumbnail"
@@ -551,7 +637,7 @@
           </div>
         </div>
 
-        <!-- Project 5: Personal Portfolio -->
+        <!-- Project 6: Personal Portfolio -->
         <div class="project-card reveal" data-category="web">
           <div class="project-card__image">
             <div class="project-card__thumbnail"
@@ -575,7 +661,7 @@
           </div>
         </div>
 
-        <!-- Project 6: Data Analysis -->
+        <!-- Project 7: Data Analysis -->
         <div class="project-card reveal" data-category="ml">
           <div class="project-card__image">
             <div class="project-card__thumbnail"
@@ -736,20 +822,22 @@
           </div>
         </div>
 
-        <!-- Achievement 2 -->
+        <!-- Achievement 2: SLIoT 2025 -->
         <div class="achievement-card reveal">
           <div class="achievement-card__image">
-            <div class="achievement-card__placeholder">
-              <i data-lucide="award"></i>
-              <span>Upload Image</span>
+            <div class="project-slideshow" data-slideshow>
+              <img class="project-slideshow__img active" src="achievement 2/1754059837918.jpg" alt="SLIoT 2025 — Team Presentation" loading="lazy" />
+              <img class="project-slideshow__img" src="achievement 2/1754059842987.jpg" alt="SLIoT 2025 — Finals Stage" loading="lazy" />
+              <img class="project-slideshow__img" src="achievement 2/1754059843528.jpg" alt="SLIoT 2025 — Competition" loading="lazy" />
+              <div class="project-slideshow__dots"></div>
             </div>
           </div>
           <div class="achievement-card__body">
-            <div class="achievement-card__badge">🥇 Competition</div>
-            <h3 class="achievement-card__title">Your Achievement Title</h3>
-            <p class="achievement-card__org">Competition / Hackathon Name</p>
-            <p class="achievement-card__date">2024</p>
-            <p class="achievement-card__description">Brief description of the achievement and what it means to you.</p>
+            <div class="achievement-card__badge">🥇 National Finalist</div>
+            <h3 class="achievement-card__title">SLIoT Competition 2025 — Finalist</h3>
+            <p class="achievement-card__org">Team Pixavisualz — Sri Lanka IoT Competition</p>
+            <p class="achievement-card__date">2025</p>
+            <p class="achievement-card__description">Reached the national-level finals of the SLIoT Competition with an NFC-based Vehicle Documentation Retrieval System that digitizes traffic law enforcement — enabling instant document verification via NFC card scanning.</p>
           </div>
         </div>
 
